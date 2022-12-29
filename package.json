@@ -1,9 +1,9 @@
 {
-  "name": "test01",
+  "name": "test01zcl01",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "周川林 <zhoucl@yinhai.com>",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
