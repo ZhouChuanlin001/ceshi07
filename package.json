@@ -1,89 +1,208 @@
 {
-  "name": "test01zcl01",
-  "version": "1.0.4",
-  "description": "A Vue.js project",
-  "author": "周川林 <zhoucl@yinhai.com>",
-  "private": false,
-  "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "npm run dev",
-    "unit": "jest --config test/unit/jest.conf.js --coverage",
-    "e2e": "node test/e2e/runner.js",
-    "test": "npm run unit && npm run e2e",
-    "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
-    "build": "node build/build.js"
-  },
-  "dependencies": {
-    "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
-  },
-  "devDependencies": {
-    "autoprefixer": "^7.1.2",
-    "babel-core": "^6.22.1",
-    "babel-eslint": "^8.2.1",
-    "babel-helper-vue-jsx-merge-props": "^2.0.3",
-    "babel-jest": "^21.0.2",
-    "babel-loader": "^7.1.1",
-    "babel-plugin-dynamic-import-node": "^1.2.0",
-    "babel-plugin-syntax-jsx": "^6.18.0",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
-    "babel-plugin-transform-runtime": "^6.22.0",
-    "babel-plugin-transform-vue-jsx": "^3.5.0",
-    "babel-preset-env": "^1.3.2",
-    "babel-preset-stage-2": "^6.22.0",
-    "babel-register": "^6.22.0",
-    "chalk": "^2.0.1",
-    "chromedriver": "^2.27.2",
-    "copy-webpack-plugin": "^4.0.1",
-    "cross-spawn": "^5.0.1",
-    "css-loader": "^0.28.0",
-    "eslint": "^4.15.0",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-friendly-formatter": "^3.0.0",
-    "eslint-loader": "^1.7.1",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-node": "^5.2.0",
-    "eslint-plugin-promise": "^3.4.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "eslint-plugin-vue": "^4.0.0",
-    "extract-text-webpack-plugin": "^3.0.0",
-    "file-loader": "^1.1.4",
-    "friendly-errors-webpack-plugin": "^1.6.1",
-    "html-webpack-plugin": "^2.30.1",
-    "husky": "^4.3.8",
-    "jest": "^22.0.4",
-    "jest-serializer-vue": "^0.3.0",
-    "lint-staged": "^12.3.7",
-    "nightwatch": "^0.9.12",
-    "node-notifier": "^5.1.2",
-    "optimize-css-assets-webpack-plugin": "^3.2.0",
-    "ora": "^1.2.0",
-    "portfinder": "^1.0.13",
-    "postcss-import": "^11.0.0",
-    "postcss-loader": "^2.0.8",
-    "postcss-url": "^7.2.1",
-    "rimraf": "^2.6.0",
-    "selenium-server": "^3.0.1",
-    "semver": "^5.3.0",
-    "shelljs": "^0.7.6",
-    "uglifyjs-webpack-plugin": "^1.1.1",
-    "url-loader": "^0.5.8",
-    "vue-jest": "^1.0.2",
-    "vue-loader": "^13.3.0",
-    "vue-style-loader": "^3.0.1",
-    "vue-template-compiler": "^2.5.2",
-    "webpack": "^3.6.0",
-    "webpack-bundle-analyzer": "^2.9.0",
-    "webpack-dev-server": "^2.9.1",
-    "webpack-merge": "^4.1.0"
-  },
-  "engines": {
-    "node": ">= 6.0.0",
-    "npm": ">= 3.0.0"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ]
+	"info": {
+		"_postman_id": "6864711c-1ac1-4974-83d2-6f0e847ba028",
+		"name": "nestjs api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "根据最新提交设置tag",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3001/git/tags?tag=v0.0.8&repos=ceshi03",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"git",
+						"tags"
+					],
+					"query": [
+						{
+							"key": "tag",
+							"value": "v0.0.8"
+						},
+						{
+							"key": "repos",
+							"value": "ceshi03"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "设置密钥 npm_token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3001/git/setSecrets",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"git",
+						"setSecrets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "根据模板生成初始仓库",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user",
+							"value": "ZhouChuanlin001",
+							"type": "default"
+						},
+						{
+							"key": "templateRepos",
+							"value": "Test",
+							"type": "default"
+						},
+						{
+							"key": "newReposName",
+							"value": "ceshi06",
+							"type": "default"
+						},
+						{
+							"key": "webhookUrl",
+							"value": "https://hao.360.com",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3001/git/createRepos",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"git",
+						"createRepos"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "更新单个文件",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user",
+							"value": "ZhouChuanlin001",
+							"type": "default"
+						},
+						{
+							"key": "repos",
+							"value": "Test",
+							"type": "default"
+						},
+						{
+							"key": "path",
+							"value": "ceshi01.vue",
+							"type": "default"
+						},
+						{
+							"key": "content",
+							"value": "PHRlbXBsYXRlPgogIDxkaXY+CiAgICA8ZGl2IGNsYXNzPSJhZCIgc3R5bGU9IndpZHRoOiAxMDAlO2hlaWdodDogMjQ1cHgiPgoKICAgIDwvZGl2PgogICAgPCEtLemtheWKm+epuumXtC0tPgogICAgPGRpdj4KICAgICAgPGRpdiBzdHlsZT0iZm9udC1zaXplOiAxNHB4O21hcmdpbi10b3A6IDEwcHg7cGFkZGluZzogMTBweDtib3JkZXItYm90dG9tOiAycHggc29saWQgYmxhY2s7bWFyZ2luLWxlZnQ6IDIwcHg7bWFyZ2luLXJpZ2h0OiAyMHB4Ij4KICAgICAgICA8aDQ+6a2F5Yqb56m66Ze0PC9oND4KICAgICAgPC9kaXY+CiAgICAgIDxkaXYgY2xhc3M9ImNvbnRlbnQiPgogICAgICAgIDxkaXYgY2xhc3M9ImNvbnRlbnQtaXRlbSIgdi1mb3I9Iml0ZW0gaW4gaW1nRGF0YSI+CiAgICAgICAgICA8ZGl2IGNsYXNzPSJpdGVtLWltZyI+CjwhLS0gICAgICAgICAgICA8ZGl2IGNsYXNzPSJpbWciIDpzdHlsZT0ie2JhY2tncm91bmQ6J3VybCgnK3JlcXVpcmUoYCR7aXRlbS51cmx9YCkrJyknfSI+PC9kaXY+LS0+CiAgICAgICAgICAgIDxpbWcgY2xhc3M9ImltZyIgOnNyYz0iaXRlbS51cmwiIGFsdD0iIj4KICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPGRpdiBzdHlsZT0ibGluZS1oZWlnaHQ6IDIwcHg7cGFkZGluZy10b3A6IDEwcHg7Ym94LXNpemluZzpib3JkZXItYm94O3RleHQtYWxpZ246IGNlbnRlcjt3aWR0aDogMTMwcHg7aGVpZ2h0OjU1cHg7YmFja2dyb3VuZC1jb2xvcjogYmxhY2s7Y29sb3I6IHJnYigyMzMsMjMzLDIzMykiPgogICAgICAgICAgICA8aDUgc3R5bGU9ImxldHRlci1zcGFjaW5nOiAxcHgiPnt7aXRlbS50aXRsZX19PC9oNT4KICAgICAgICAgICAgPHAgc3R5bGU9Im1hcmdpbi1sZWZ0OiAtMTVweDt0cmFuc2Zvcm06c2NhbGUoMC42KTtmb250LXNpemU6IDEwcHg7d2lkdGg6IDE2MHB4OyI+e3tpdGVtLmRlc2N9fTwvcD4KICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgogICAgICA8L2Rpdj4KICAgIDwvZGl2PgogIDwvZGl2Pgo8L3RlbXBsYXRlPgoKPHNjcmlwdD4KICAgIGV4cG9ydCBkZWZhdWx0IHsKICAgICAgICBuYW1lOiAicHJvZHVjdFZpZXciLAogICAgICBkYXRhKCl7CiAgICAgICAgICByZXR1cm57CiAgICAgICAgICAgIGltZ0RhdGE6W10KICAgICAgICAgIH0KICAgICAgfSwKICAgICAgbW91bnRlZCgpIHsKICAgICAgICAgIHRoaXMuaW1nRGF0YSA9IFsKICAgICAgICAgICAgewogICAgICAgICAgICAgIHRpdGxlOifpm4Xoh7TovbvlpaInLAogICAgICAgICAgICAgIHVybDpyZXF1aXJlKCcuLi9hc3NldHMvaW1nL2ViNzQ3ZTA0MDZjYzM5YjFhZmNjMGYxODBhNWY2N2Y2LmpwZycpLAogICAgICAgICAgICAgIGRlc2M6J0VMRUdBTlQgTElHSFQgTFVYVVJZJwogICAgICAgICAgICB9LAogICAgICAgICAgICB7CiAgICAgICAgICAgICAgdGl0bGU6J+mrmOi0teWFuOmbhScsCiAgICAgICAgICAgICAgdXJsOnJlcXVpcmUoJy4uL2Fzc2V0cy9pbWcvMzNjMTg2MTI5NWE0ZjMwYTY4MzFiOWMzMDdkNjM2NTAuanBnJyksCiAgICAgICAgICAgICAgZGVzYzonTk9CTEUgQU5EIEVMRUdBTlQnCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICB0aXRsZTon5Y2O5Li95oGi5byYJywKICAgICAgICAgICAgICB1cmw6cmVxdWlyZSgnLi4vYXNzZXRzL2ltZy85Njg4ODU2YzgyNWZjZDYyZTAwYmU4Njc3OTU5NTJhNS5qcGcnKSwKICAgICAgICAgICAgICBkZXNjOidNQUdOSUZJQ0VOVCcKICAgICAgICAgICAgfSwKICAgICAgICAgICAgewogICAgICAgICAgICAgIHRpdGxlOifnmb3mtqblupXnurknLAogICAgICAgICAgICAgIHVybDpyZXF1aXJlKCcuLi9hc3NldHMvaW1nLzkzNzhiOGUwZTljNTdjNmU4YzliYjU5YTg5ZDUyNDA2LmpwZycpLAogICAgICAgICAgICAgIGRlc2M6J1dISVRFTklORyBTSEFESU5HJwogICAgICAgICAgICB9LAogICAgICAgICAgICB7CiAgICAgICAgICAgICAgdGl0bGU6J+mdmeaziua3sei/nCcsCiAgICAgICAgICAgICAgdXJsOnJlcXVpcmUoJy4uL2Fzc2V0cy9pbWcvYzZiZmI4YzYwNmYyM2JkMjY5YWYyM2U3YzgzNGNjZGYuanBnJyksCiAgICAgICAgICAgICAgZGVzYzonUVVJRVQgQU5EIEZBUi1SRUFDSElORycKICAgICAgICAgICAgfSwKICAgICAgICAgICAgewogICAgICAgICAgICAgIHRpdGxlOifpq5jnq6/lpKfmsJQnLAogICAgICAgICAgICAgIHVybDpyZXF1aXJlKCcuLi9hc3NldHMvaW1nL2ViNzQ3ZTA0MDZjYzM5YjFhZmNjMGYxODBhNWY2N2Y2LmpwZycpLAogICAgICAgICAgICAgIGRlc2M6J0hJR0ggRU5EIEFUTU9TUEhFUkUnCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICB0aXRsZTon6Ieq54S2576O5aaZJywKICAgICAgICAgICAgICB1cmw6cmVxdWlyZSgnLi4vYXNzZXRzL2ltZy9jNDFmNDMzYTRlMDM0YmJmZGY1OGVkOWIwMDliYzFiZi5qcGcnKSwKICAgICAgICAgICAgICBkZXNjOidOQVRVUkFMIEJFQVVUWScKICAgICAgICAgICAgfSwKICAgICAgICAgICAgewogICAgICAgICAgICAgIHRpdGxlOifliZTpgI/lhYnms70nLAogICAgICAgICAgICAgIHVybDpyZXF1aXJlKCcuLi9hc3NldHMvaW1nL2Q2ZTc3ZjE1YzE5ZTdkNWJiYmEzNzM0M2ZlMmQ5MWZjLmpwZycpLAogICAgICAgICAgICAgIGRlc2M6J0NMRUFSIExVU1RFUicKICAgICAgICAgICAgfSwKICAgICAgICAgICAgewogICAgICAgICAgICAgIHRpdGxlOifnqLPph43muIXniL0nLAogICAgICAgICAgICAgIHVybDpyZXF1aXJlKCcuLi9hc3NldHMvaW1nL2QyMWYxYjU5NGNlZDU3Yzg1MTFhMmVmMjdlNWU4YzI0LmpwZycpLAogICAgICAgICAgICAgIGRlc2M6J1NURUFEWSBBTkQgUkVGUkVTSElORycKICAgICAgICAgICAgfSwKICAgICAgICAgICAgewogICAgICAgICAgICAgIHRpdGxlOifml7blsJrnroDnuqYnLAogICAgICAgICAgICAgIHVybDpyZXF1aXJlKCcuLi9hc3NldHMvaW1nL2M1M2I5MTM0NTRiNjU1YTg5NTQyZDRmOGIyZjI2NDdkLmpwZycpLAogICAgICAgICAgICAgIGRlc2M6J0ZBU0hJT04gU0lNUExJQ0lUWScKICAgICAgICAgICAgfSwKICAgICAgICAgIF0KICAgICAgfQogICAgfQo8L3NjcmlwdD4KCjxzdHlsZSBzY29wZWQ+Ci5hZHsKICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoIi4uL2Fzc2V0cy9pbWcvbHJoYS5qcGciKTsKICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyOwogIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7CiAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyOwp9Ci5jb250ZW50ewogIGRpc3BsYXk6IGZsZXg7CiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7CiAgZmxleC1kaXJlY3Rpb246IHJvdzsKICBmbGV4LXdyYXA6IHdyYXA7CiAgbWFyZ2luLWJvdHRvbTogMzBweDsKfQogIC5jb250ZW50LWl0ZW17CiAgICB3aWR0aDogMTMwcHg7CiAgICBoZWlnaHQ6IDIwNXB4OwogICAgbWFyZ2luLXRvcDogMzBweDsKICAgIG1hcmdpbi1sZWZ0OiA2cHg7CiAgICBtYXJnaW4tcmlnaHQ6IDZweDsKICB9CiAgLml0ZW0taW1newogICAgd2lkdGg6IDEzMHB4OwogICAgaGVpZ2h0OiAxNTBweDsKICAgIG92ZXJmbG93OiBoaWRkZW47CiAgfQogIC5pbWd7CiAgICB3aWR0aDogMTMwcHg7CiAgICBoZWlnaHQ6IDE1MHB4OwogICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCIuLi9hc3NldHMvaW1nLzMtNC5qcGciKTsKICAgIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjsKICAgIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7CiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyOwogICAgdHJhbnNpdGlvbjogbGluZWFyIDAuM3M7CiAgfQogIC5pbWc6aG92ZXJ7CiAgICB0cmFuc2Zvcm06IHNjYWxlKDEuMik7CiAgfQo8L3N0eWxlPgo=",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3001/git/commitFile",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"git",
+						"commitFile"
+					]
+				}
+			},
+			"response": []
+		}
+	]
 }
